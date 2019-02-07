@@ -38,7 +38,7 @@
     </style>
   </head>
 
-  <body onload="logo1()">
+  <body>
     <header class="header bg">
       <div class="container text-white">
         <div class="row">
@@ -150,13 +150,14 @@
       <div class="container py-5">
         <div class="row" data-aos="fade-up" data-aos-delay="300">
           <div class="col-md-12">
-            <form>
+            <form id="contactForm">
               <div class="form-group row">
                 <div class="col-sm-6">
                   <input
                     type="text"
                     class="form-control"
                     placeholder="Your Name"
+                    name="name"
                     required
                   />
                 </div>
@@ -165,6 +166,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Your Email"
+                    name="email"
                     required
                   />
                 </div>
@@ -172,7 +174,8 @@
                   <input
                     type="number"
                     class="form-control"
-                    placeholder="Your Phont Number"
+                    name="phone"
+                    placeholder="Your Phone Number"
                     required
                   />
                 </div>
@@ -185,13 +188,23 @@
                     placeholder="Your Message"
                     rows="6"
                     required
+                    name="message"
                   ></textarea>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">
+              <button id="btnSubmit" class="btn btn-primary">
                 Alright Submit it
               </button>
             </form>
+            <br />
+            <div
+              id="alert_contact"
+              class="alert alert-success"
+              role="alert"
+              hidden
+            >
+              Thank you. We'll contact you shortly.
+            </div>
           </div>
         </div>
       </div>
